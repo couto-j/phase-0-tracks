@@ -17,3 +17,6 @@ A commit saves the changes you've made to a file. It should outline why the chan
 * What is a merge conflict?
 
 A mrege conflict is an error when attempting to merge one branch into another. It could happen because a colleague edited the same file on the same lines as you did, or because someone has deleted a file that you've modified, for example.
+
+
+Change is here: I feel like a tech master learning all this stuff already. Can't wait for week 2!
