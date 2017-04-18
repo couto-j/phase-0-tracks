@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Just A Little Information</title>
+  </head>
+  <body>
+      <form name="information" action="success.html" method="get">
+  <fieldset>
+    <div>
+      <label>First Name:</label>
+      <input type="text" name="firstname">
+      <label>Last Name:</label>
+      <input type="text" name="lastname">
+    </div>
+    <br>
+    <div>
+      <label>Email:</label>
+      <input type="email" name="email">
+    </div>
+    <br>
+    <div>
+        <label>Are you a guest of the groom or the bride?</label>
+        <p>
+            <input type="radio" name="guest_type" value="Groom">Guest of Groom<br>
+            <input type="radio" name="guest_type" value="Bride">Guest of Bride<br>
+    </div>
+    <br>
+    <div>
+        <label>What drink(s) during dinner?</label>
+        <p>
+            <input type="checkbox" name="drink" value="Soda">Soda
+            <input type="checkbox" name="drink" value="Water" checked="checked">Water
+            <input type="checkbox" name="drink" value="Wine">Wine
+    </div>
+    <br>
+    <div>
+      <label>Meal Of Choice:</label>
+      <select name="meal">
+        <option value="chicken">Chicken</option>
+        <option value="fish">Fish</option>
+        <option value="steak">Steak</option>
+      </select>
+    </div>
+    <br>
+    <div>    
+      <label>Any special instructions? </label>
+    <p></p> <textarea rows="4" cols="50">
+    Let us know of any special instructions we should follow when preparing your meal. 
+    </textarea>
+    </div>
+  </fieldset>
+  <button type="submit">Confirm My Choices
+  </body>
+</html>
