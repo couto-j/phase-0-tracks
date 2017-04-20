@@ -8,8 +8,20 @@ age = gets.chomp.to_i
 puts "What year were you born?"
 dob = gets.chomp.to_i
 
+#checking age versus birth year
+
+current_year = Date.today.year
+
+if (current_year - birth_year) == age
+	age_check = true
+else
+	age_check = false
+end
+
 puts "Our company cafeteria serves garlic bread, but you need to pre-order. Should we order some for you?"
 bread = gets.chomp.downcase
+
+#conditoinal for ordering garlic bread
 
 puts "Would you like to enroll in the company's health insurance?"
 insurance = gets.chomp.downcase
