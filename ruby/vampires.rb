@@ -23,8 +23,22 @@ bread = gets.chomp.downcase
 
 #conditoinal for ordering garlic bread
 
+if bread == "yes"
+	order_bread = "true"
+else
+	order_bread = "false"
+end
+
 puts "Would you like to enroll in the company's health insurance?"
 insurance = gets.chomp.downcase
+
+#conditoinal for waiving health insurance
+
+if insurance == "yes"
+	waive_insurance = "false"
+else
+	waive_insurance = "true"
+end
 
 
 
