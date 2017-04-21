@@ -1,5 +1,18 @@
-# Four introductory questions.
+#Loop to process multiple employees in a row.
+continue = true
+while continue
+	puts "How many employees would you like to process?"
+	number_employees = gets.chomp.to_i
+	if number_employees > 0
+		continue = false
+	else
+		puts "Enter a positive number, please."
+	end
+end
+counter = 0
+until counter == number_employees
 
+# Four introductory questions.	
 puts "What is your name?"
 name = gets.chomp
 
@@ -52,4 +65,5 @@ result = String.new
 		result = "Results inconclusive."
 	end
 puts result 
+end
 
