@@ -34,5 +34,22 @@ insurance = gets.chomp.downcase
 		buy_insurance = false
 	end
 
+#Conditonals to check for vampires.
+
+result = String.new
+	if age_check && (order_bread || buy_insurance)
+		result = "Probably not a vampire."
+	elsif age_check == false && (order_bread == false && buy_insurance == false)
+		result = "Probably a vampire."
+	end
+	if age_check == false && order_bead == false && buy_insurance == false
+		result = "Almost certainly a vampire."
+	end
+	if name == "Drake Cula" or name == "Tu Fang"
+		result = "Definitely a vampire."
+	end
+	if result == ""
+		result = "Results inconclusive."
+	end
 
 
