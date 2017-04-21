@@ -58,8 +58,8 @@ until counter == number_employees
 			allergy = gets.chomp.downcase
 			if allergy == "sunshine"
 			result = "Probably a vampire"
-			sunshine = true
 			add_allergies = false
+			sunshine = true 
 			elsif allergy == "done"
 			add_allergies = false
 			end
@@ -84,7 +84,11 @@ until counter == number_employees
 			if result == ""
 				result = "Results inconclusive."
 			end
+		end
 		puts result 
-	end
+		counter +=1
+		sunshine = false
 end
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
 
