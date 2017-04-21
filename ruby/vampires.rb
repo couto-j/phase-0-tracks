@@ -39,10 +39,10 @@ insurance = gets.chomp.downcase
 result = String.new
 	if age_check && (order_bread || buy_insurance)
 		result = "Probably not a vampire."
-	elsif age_check == false && (order_bread == false && buy_insurance == false)
+	elsif age_check == false && (order_bread == false || buy_insurance == false)
 		result = "Probably a vampire."
 	end
-	if age_check == false && order_bead == false && buy_insurance == false
+	if age_check == false && order_bread == false && buy_insurance == false
 		result = "Almost certainly a vampire."
 	end
 	if name == "Drake Cula" or name == "Tu Fang"
@@ -51,5 +51,5 @@ result = String.new
 	if result == ""
 		result = "Results inconclusive."
 	end
-
+puts result 
 
