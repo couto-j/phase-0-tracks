@@ -1,59 +1,38 @@
-#asking some questions
-puts "What's your name?"
+# Four introductory questions.
+
+puts "What is your name?"
 name = gets.chomp
 
 puts "How old are you?"
-age = gets.chomp.to_i 
+age = gets.chomp.to_i
 
-puts "What year were you born?"
-dob = gets.chomp.to_i
+puts "What year where you born?"
+birth_year = gets.chomp.to_i
 
-#checking age versus birth year
+# Checking for age versus birth year
 
-current_year = Date.today.year
+this_year = Time.new.year
+	if (this_year - birth_year) == age
+		age_check = true
+	else
+		age_check = false
+	end
 
-if (current_year - birth_year) == age
-	age_check = true
-else
-	age_check = false
-end
-
-puts "Our company cafeteria serves garlic bread, but you need to pre-order. Should we order some for you?"
+puts "Should we order some garlic bread for you?"
 bread = gets.chomp.downcase
-
-#conditoinal for ordering garlic bread
-
-if bread == "yes"
-	order_bread = "true"
-else
-	order_bread = "false"
-end
+	if bread == "yes"
+		order_bread = true
+	else 
+		order_bread = false
+	end 
 
 puts "Would you like to enroll in the company's health insurance?"
 insurance = gets.chomp.downcase
-
-#conditoinal for waiving health insurance
-
-if insurance == "yes"
-	waive_insurance = "false"
-else
-	waive_insurance = "true"
-end
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
+	if insurance == "yes"
+		buy_insurance = true
+	else
+		buy_insurance = false
+	end
 
 
 
