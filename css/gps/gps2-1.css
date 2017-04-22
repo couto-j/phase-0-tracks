@@ -1,1 +1,31 @@
+body {
+	font-family: arial, georgia, sans-serif;
+	background-color: black;
+}
 
+header {
+	background-color: blue;
+	color: white;
+	padding: 5%;
+}
+
+.column-1 {
+	background-color: red;
+	float: left;
+	width: 45%;
+	margin-left: 10px;
+	padding: 20px;
+}
+
+.column-2 {
+	background-color: green;
+	float: right;
+	width: 45%;
+	margin-right: 10px;
+	padding: 20px;
+}
+
+footer {
+	background-color: orange;
+	clear: both;
+}
