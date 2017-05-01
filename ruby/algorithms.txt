@@ -1,0 +1,18 @@
+(Assuming both owner of robot and robot are already in the elevator)
+
+- Request from owner which floor they would like to visit.
+  - Until you hear a response, or until you have attempted three times:
+    - Ask "Which floor would you like?"
+    - Wait five seconds for a response.
+   - If no response is heard from owner:
+    - Stop asking.
+   - If response is heard from owner:
+    - Press button to corresponding floor that owner requests.
+  - If response is heard from someone other than owner:
+    - Press button corresponding to floor that individual requests to be polite.
+ - Ride elevator to appropriate floor
+  - On each floor that the eleveator stops that the owner did not request:
+    -Remain in same position within elevato
+  - When elevator stops at floor owner requested:
+    - Follow owner out of elevator
+   
