@@ -7,6 +7,29 @@
   # print the list to the console [can you use one of your other methods here?]
 # output: Hash [what data type goes here, array or hash?]
 
+#grocery_list = ("apples cereal carrots pizza")
+
+#grocery_arr = []
+#grocery_list.split(' ')
+#p grocery_list 
+
+def create_list(list)
+	grocery_arr = []
+	grocery_arr = list.split(' ')
+	grocery_quant = {}
+	grocery_arr.each do |types|
+		grocery_quant[types] = 1
+	end
+	grocery_quant
+end
+
+p create_list("apples cereal carrots pizza")
+grocery_quant = create_list("apples cereal carrots pizza")
+
+
+
+
+
 # Method to add an item to a list
 # input: list, item name, and optional quantity
 # steps: Accept new values and assign that to the hash.
