@@ -46,11 +46,33 @@ puts "after .map on hash:"
 updated_inventory = inventory_count.map do |item, number|
   number = number+1
   item = item.upcase
-  puts "You now have #{number+1} #{item} in your knitting bag."
+  puts "You now have #{number} #{item} in your knitting bag."
 end
 
 puts inventory_count
-p updated_inventory
+puts updated_inventory
 
+# Release 2 - using documentation to satisfy array conditions
 
+numbers = [0,1,2,3,4,5]
+numbers.delete_if {|number| number<2} 
+numbers = [0,1,2,3,4,5]
+numbers.keep_if {|number| number>3}
+numbers = [0,1,2,3,4,5]
+numbers.select {|number| number>2}
+numbers = [0,1,2,3,4,5]
+numbers2 = numbers.take_while {|number| number<3}
+
+#Release 2 - using documentation to satisfy hash conditions
+
+num_letters = {1 => "one", 2 => "two",3 =>"three", 4 => "four", 5 => "five"}
+num_letters.delete_if {|num, letter| num >2 }
+num_letters = {1 => "one", 2 => "two",3 =>"three", 4 => "four", 5 => "five"}
+num_letters.select! {|num,letter| letter.length > 3}
+num_letters = {1 => "one", 2 => "two",3 =>"three", 4 => "four", 5 => "five"}
+num_letters.keep_if {|num, letter| letter.length <= 4}
+num_letters = {1 => "one", 2 => "two",3 =>"three", 4 => "four", 5 => "five"}
+num_letters.reject! {|num,letter| num < 3}
+
+ 
 
