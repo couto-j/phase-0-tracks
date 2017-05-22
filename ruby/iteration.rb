@@ -1,46 +1,9 @@
-def print_status
-  puts "This is the initial status: "
-  yield("middle")
-  puts "This is the latest status: " 
-end
-print_status do |middle|
-  puts "This is the #{middle} status."  
+#Method that takes a block.
+
+def items
+	item1 = "yarn"
+	item2 = "knitting needles"
+	yield(item1, item2)
 end
 
-#add array and hash and use .each and .map on them
-animals = ["camel","elephant","tiger"]
-football_team = { seattle: "seahawks", cleveland: "browns", baltimore: "ravens" }
-animals.each do |animal|
-  puts "The name of the animal is #{animal}."
-end
-football_team.each do |city, team|
-  puts "The #{team} are from #{city}."
-end
-animals.map! do |animal|
-  animal.reverse
-end
-puts animals
-football_team.map do |city, team|
-  puts "The #{team.to_s.reverse} is from #{city.to_s.reverse}"
-end
-
-#use docs to find methods that satisfy array conditions in release 2
-numbers = [0,1,2,3,4,5]
-numbers.delete_if {|number| number<3}
-numbers = [0,1,2,3,4,5]
-numbers.keep_if {|number| number<3}
-numbers = [0,1,2,3,4,5]
-numbers.select! {|number| number<3}
-numbers = [0,1,2,3,4,5]
-numbers2 = numbers.take_while {|number| number<3}
-
-#use docs to find methods that satisfy hash conditions in release 2
-num_letters = {1 => "one", 2 => "two",3 =>"three", 4 => "four"}
-num_letters.delete_if {|num, letter| num >2 }
-num_letters = {1 => "one", 2 => "two",3 =>"three", 4 => "four"}
-num_letters.select! {|num,letter| letter.length > 3}
-num_letters = {1 => "one", 2 => "two",3 =>"three", 4 => "four"}
-num_letters.keep_if {|num, letter| letter.length <= 4}
-num_letters = {1 => "one", 2 => "two",3 =>"three", 4 => "four"}
-num_letters.reject! {|num,letter| num < 3}
-puts num_letters
+items { |item1, item2| puts "It looks like you're carrying around #{item1} and #{item2}." }
