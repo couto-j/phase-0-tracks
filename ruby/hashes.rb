@@ -49,4 +49,47 @@ puts "Does the client like ombre designs? (yes or no)"
   else
     client[:ombre] = false
   end
+  
 puts client
+
+#Check to make sure client data is correct.
+
+puts "Does the above information look correct? (yes or no)"
+
+error_check = gets.chomp.downcase
+  if error_check == "yes"
+    puts "Wonderful. Here is the client information for your review:"
+  else error_check == "no"
+    puts "Oh no, let's see if we can fix that. Which category should we fix?"
+    category_fix = gets.chomp.downcase
+    if category_fix == "name" || category_fix == "street_address" || category_fix == "city" || category_fix == "state" || category_fix == "email" || category_fix == "phone" || category_fix == "favorite_colors" || category_fix == "colors_to_avoid"
+      puts "What is the correct information?"
+      corrected = gets.chomp.to_s
+      client[category_fix.to_sym] = corrected
+      puts "Here is the corrected information:"
+      puts client
+    elsif category_fix == "age" || category_fix == "children"
+      puts "What is the correct information?"
+      corrected = gets.chomp.to_i
+      client[category_fix.to_sym] = corrected
+      puts "Here is the corrected information:"
+      puts client
+    elsif category_fix == "married"  
+      if client[:married] == true
+        client [:married] = false
+      else client[:married] = true
+      end
+      puts "Here is the corrected information:"
+      puts client
+    elsif category_fix == "ombre"  
+      if client[:ombre] == true
+        client [:ombre] = false
+      else client[:ombre] = true
+      end
+      puts "Here is the corrected information:"
+      puts client
+    else 
+      puts "That is not any kind of information we're looking for. Here is the client's information summary:"
+      puts client
+    end
+  end
