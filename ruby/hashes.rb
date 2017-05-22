@@ -52,7 +52,7 @@ puts "Does the client like ombre designs? (yes or no)"
   
 puts client
 
-#Check to make sure client data is correct.
+#Check to make sure client data is correct and change as needed.
 
 puts "Does the above information look correct? (yes or no)"
 
