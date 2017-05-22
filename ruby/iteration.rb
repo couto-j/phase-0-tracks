@@ -1,7 +1,7 @@
 def print_status
-  puts "this is the initial status: "
+  puts "This is the initial status: "
   yield("middle")
-  puts "this is the latest status: " 
+  puts "This is the latest status: " 
 end
 print_status do |middle|
   puts "This is the #{middle} status."  
@@ -11,7 +11,7 @@ end
 animals = ["camel","elephant","tiger"]
 football_team = { seattle: "seahawks", cleveland: "browns", baltimore: "ravens" }
 animals.each do |animal|
-  puts "the name of the animal is #{animal}."
+  puts "The name of the animal is #{animal}."
 end
 football_team.each do |city, team|
   puts "The #{team} are from #{city}."
