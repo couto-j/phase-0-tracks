@@ -1,63 +1,67 @@
 class Puppy
+  
   def initialize
-    puts "Initializing new puppy instance..."
+    puts "Intializing new puppy instance ..."
   end
+  
   def fetch(toy)
-    puts "I brought back the #{toy}!"
+    puts "I brought back the #{toy}."
     toy
   end
-  def speak(time)
-    time.times do |time|
+  
+  def speak(number)
+    number.times do |number|
       puts "Woof!"
-    end 
+    end
   end
-  def roll_over 
+  
+  def roll_over
     puts "*rolls over*"
   end
-  def sit
-    puts "I am sitting down!"
+  
+  def dog_years(x)
+    x * 7
   end
-
+  
+  def sit 
+    puts "I'm sitting down!"
+  end
 end
 
 
-# emily = Puppy.new
-# emily.fetch("ball")
-# emily.speak(5)
-# emily.roll_over
-# emily.sit
+emily = Puppy.new 
+emily.fetch("ball")
+emily.speak(5)
+emily.roll_over
+emily.dog_years(2)
+emily.sit
 
-class Gymnast
+class Dancer
+  
   def initialize(name)
     @name = name
-    puts "Initializing new gymnast #{@name}"
+    puts "A new dancer is on deck! Cheer for #{@name}!"
   end
-  def jump(num)
-    puts "jumps" * num
+  
+  def twirl(number)
+      puts "#{@name} is twirling #{number} times!"
   end
-  def flip
-    puts "#{@name} is flipping through the air."
+  
+  def jump
+    puts "It's time to jump! JUMP JUMP!"
   end
-
 end
-names = ['gymnast1', 'gymnast2', 'gymnast3', 'gymnast4', 'gymnast5', 'gymnast6',
-'gymnast7', 'gymnast8', 'gymnast9', 'gymnast10', 'gymnast11', 'gymnast12',
-'gymnast13', 'gymnast14', 'gymnast15', 'gymnast16', 'gymnast17', 'gymnast18',
-'gymnast19', 'gymnast20', 'gymnast21', 'gymnast22', 'gymnast23', 'gymnast24',
-'gymnast25', 'gymnast26', 'gymnast27', 'gymnast28', 'gymnast29', 'gymnast30',
-'gymnast31', 'gymnast32', 'gymnast33', 'gymnast34', 'gymnast35', 'gymnast36', 
-'gymnast37', 'gymnast38', 'gymnast39', 'gymnast40', 'gymnast41', 'gymnast42', 
-'gymnast43', 'gymnast44', 'gymnast45', 'gymnast46', 'gymnast47', 'gymnast48', 
-'gymnast49', 'gymnast50' ]
 
-gymnasts = []
+
+names = ['Terrence', 'Nolan', 'Shirely', 'Agueda', 'Tatyana', 'Keshia', 'Georgene', 'Marcia', 'Brigitte', 'Ma', 'Carl', 'Stormy', 'Tayna', 'Trinh', 'Kali', 'Andre', 'Florinda', 'Guy', 'Dayna', 'Otis', 'Jimmie', 'Estrella', 'Willodean', 'Jeanett', 'Ha', 'Opal', 'Ilana', 'Brock', 'Venice', 'Jessi', 'Dorla', 'Ginny', 'Astrid', 'Clay', 'Karey', 'Criselda', 'Emely', 'Aileen', 'Isaac', 'Amber', 'Blanch', 'Jammie', 'Trang', 'Florine', 'Fannie', 'Avril', 'Latina', 'Iris', 'Lanora', 'Reba' ]
+
+dancers = []
+
 for x in (0..49)
-  gymnasst[x] = gymnast.new(names[x])
-end
-puts gymnasts
-
-gymnasts.each do |index|
-  index.jump(5)
-  index.flip
+  dancers[x] = Dancer.new(names[x])
 end
 
+dancers.each do |index|
+  index.twirl(5)
+  index.jump 
+end
